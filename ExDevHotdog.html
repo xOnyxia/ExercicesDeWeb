@@ -1,0 +1,39 @@
+<!--DOCTYPE html-->
+<html>
+<head>
+<title>HotDog_CasesACocher</title>
+<script type="text/javascript" language="Javascript">
+
+function hotdog(){
+var phrase;
+phrase="Vous aimez avoir: ";
+if(document.getElementById("chkMoutarde").checked==true){
+    phrase += "de la moutarde ";
+}
+if(document.getElementById("chkKetchup").checked==true){
+    phrase += "du ketchup ";
+}
+if(document.getElementById("chkRelish").checked==true){
+    phrase += "de la relish ";
+}
+window.alert(phrase);
+}
+function tout_garni(){
+formHotDog.chkMoutarde.checked=true;
+formHotDog.chkKetchup.checked=true;
+formHotDog.chkRelish.checked=true;
+}
+</script>
+</head>
+<body>
+    <form name="formHotDog">
+        <h1>Qu'aimez-vous mettre dans votre hot-dog?</h1>
+        <input type="checkbox" id="chkMoutarde">de la moutarde <br>
+        <input type="checkbox" id="chkKetchup">du ketchup <br>
+        <input type="checkbox" id="chkRelish">de la relish <br>
+        <input type="button" value="Tout garni!" onclick="tout_garni()">
+        <br><br>
+        <input type="button" value="Resumer vos choix" onclick="hotdog()">
+    </form>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--Megane Dandurand-->
+<!--choix: 2e animation-->
+<html lang="fr">
+    <head><title>Devoir3DevWeb1</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <svg width="500" height="500">
+        <!--Background-->
+        <rect width="500px" height="500px" fill="#2c3e50"/>
+        <!--1er cercle-->
+        <circle id="white_circle" r="30" cx="250" cy="250" fill="white" opacity="0.6"/>
+        <!--2e cercle-->
+        <circle id="grey_circle" r="0" cx="250" cy="250" fill="white" opacity="0.6" />
+        <!--animations-->
+        <animate 
+                 xlink:href="#white_circle"
+                 attributeName="r"
+                 from="30"
+                 to="0" 
+                 dur="1s"
+                 begin="0s"
+                 repeatcount="indefinite"
+                 values="30; 0"
+                 keyTimes="0; 1"
+                 calcMode="spline"
+                 keySplines="0.42 0 0.58 1"
+                 fill="freeze"
+                 id="wcirc_anim" />
+        <animate 
+                 xlink:href="#grey_circle"
+                 attributeName="r"
+                 from="0"
+                 to="30" 
+                 dur="1s"
+                 begin="0s"
+                 repeatcount="indefinite"
+                 values="0; 30"
+                 keyTimes="0; 1"
+                 calcMode="spline"
+                 keySplines="0.42 0 0.58 1"
+                 fill="freeze" 
+                 id="gcirc_anim"/>
+      </svg>
+      </body>
+</html>

@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Cases à cocher </title>
+<script type="text/javascript" language="JavaScript">
+// ****************************************************************
+function resumer() {
+var phrase;
+phrase = "Vous avez ";
+if (formchoix.chkchocolat.checked == true) {
+phrase = phrase + " du chocolat";
+}
+if (formchoix.chkFraises.checked == true) {
+phrase = phrase + " des fraises";
+}
+if (formchoix.chkArachides.checked == true) {
+phrase = phrase + " des arachides";
+}
+window.alert(phrase);
+}
+function tous_les_choix() {
+/* Cette fonction provoque le choix de tous les condiments.
+Exécuter cette fonction a le même effet que de cocher toutes les
+cases à cocher.
+*/
+formchoix.chkchocolat.checked = true;
+formchoix.chkFraises.checked = true;
+formchoix.chkArachides.checked = true;
+}
+// ****************************************************************
+</script>
+</head>
+<body>
+<form name="formchoix">
+<h3>Qu'aimez-vous mettre dans votre crepe</h3>
+Page 7
+<input type="checkbox" name="chkchocolat">du chocolat<br><br>
+<input type="checkbox" name="chkFraises">des fraises<br><br>
+<input type="checkbox" name="chkArachides">des arachides<br><br>
+<input type="button" value="Tous les choix!" onclick="tous_les_choix()">
+<br><br>
+<input type="button" value="Résumer les préférences" onclick="resumer()">
+</form>
+</body>
+</html>

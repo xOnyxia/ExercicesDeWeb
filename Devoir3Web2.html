@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--Megane Dandurand-->
+<!--Choix: 7e animation-->
+<html lang="fr">
+    <head><title>Devoir3DevWeb2</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+    <svg width="500" height="500">
+        <!--Background-->
+        <rect width="500px" height="500px" fill="#d35400"/>
+        <!--Les 3 cercles-->
+        <circle id="white_circle1" r="0" cx="225" cy="250" fill="white"/>
+        <circle id="white_circle2" r="0" cx="250" cy="250" fill="white"/>
+        <circle id="white_circle3" r="0" cx="275" cy="250" fill="white"/>
+    <!--Animation-->
+    <animate 
+        xlink:href="#white_circle1"
+        attributeName="r"
+        from="0"
+        to="0" 
+        dur="1.25s"
+        begin="0s;wcirc_anim3.end"
+        repeatcount="indefinite"
+        values="0; 9; 0"
+        keyTimes="0; 0.5; 1"
+        calcMode="spline"
+        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        fill="freeze"
+        id="wcirc_anim1" />
+    <animate 
+        xlink:href="#white_circle2"
+        attributeName="r"
+        from="0"
+        to="0" 
+        dur="1.25s"
+        begin="wcirc_anim1.begin + 0.16s"
+        repeatcount="indefinite"
+        values="0; 9; 0"
+        keyTimes="0; 0.5; 1"
+        calcMode="spline"
+        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        fill="freeze"
+        id="wcirc_anim2" />
+    <animate 
+        xlink:href="#white_circle3"
+        attributeName="r"
+        from="0"
+        to="0" 
+        dur="1.25s"
+        begin="wcirc_anim2.begin+0.16s"
+        repeatcount="indefinite"
+        values="0; 9; 0"
+        keyTimes="0; 0.5; 1"
+        calcMode="spline"
+        keySplines="0.42 0 0.58 1;0.42 0 0.58 1"
+        fill="freeze"
+        id="wcirc_anim3" />
+      </svg>
+      </body>
+</html>

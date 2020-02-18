@@ -1,0 +1,32 @@
+<!-- Exercice Switch-->
+<html>
+<head>
+    <title>Page d'accueil</title>
+
+    <script type="text/Javascript">
+        function adresse(){
+           
+            var add= prompt("Donnez l'adresse que vous voulez visiter");
+
+            add=add.toUpperCase();
+
+        switch(add){
+            case "GOOGLE":
+            window.location="http://www.google.ca";
+            break;
+            case "UDEM":
+            window.location="http://www.umontreal.ca";
+            break;
+            default:
+            window.location="http://lrima.cmaisonneuve.qc.ca";
+        }
+        }
+    </script>
+</head>
+
+<body onload="adresse()">
+    <h1>Bonjour, quel site desirez-vous?</h1>
+
+</body>
+
+</html>
